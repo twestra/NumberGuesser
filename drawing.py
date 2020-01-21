@@ -1,4 +1,4 @@
-import pygame, random , thorpy, PIL, numpy, network2, skimage, sys
+import pygame, random, PIL, numpy, network2, skimage
 from PIL import Image
 pygame.init()
 

@@ -11,17 +11,17 @@ last_pos = (0, 0)
 color = (255, 255, 255)
 radius = 20
 guess = '5'
-guessstring = 'I see a' + guess
+guessstring = 'I See A ' + guess
 pygame.display.set_caption('Number Guesser - Westra2020')
 #Creating the message in the top right
-mfont = pygame.font.Font('freesansbold.ttf', 12)
-text = mfont.render('Press p to write; Press e to erase', True, color)
+mfont = pygame.font.Font('freesansbold.ttf', 14)
+text = mfont.render('Press E to Erase', True, color)
 textrect = text.get_rect()
 textrect.center = (660, 40)
 
 #Initial render of display message
-mfont2 = pygame.font.Font('freesansbold.ttf', 20)
-text2 = mfont.render(guessstring, True, color)
+mfont2 = pygame.font.Font('freesansbold.ttf', 30)
+text2 = mfont2.render(guessstring, True, color)
 text2rect = text2.get_rect()
 text2rect.center = (660, 280)
 
@@ -94,9 +94,9 @@ try:
         guess = str(numpy.argmax(nnet.feedforward(flatdownscaled)))
         
         #code to handle the updates to the display text
-        guessstring = 'I see a '+guess
-        mfont2 = pygame.font.Font('freesansbold.ttf', 20)
-        text2 = mfont.render(guessstring, True, color)
+        guessstring = 'I See... '+guess
+        mfont2 = pygame.font.Font('freesansbold.ttf', 30)
+        text2 = mfont2.render(guessstring, True, color)
         text2rect = text2.get_rect()
         text2rect.center = (660, 280)
         screen.fill(orange, pygame.Rect(600,200,200,100))
